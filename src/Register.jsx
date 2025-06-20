@@ -30,7 +30,7 @@ function Register() {
     formData.append('password', form.password)
     formData.append('avatar', form.avatar)
     if (form.coverImage) formData.append('coverImage', form.coverImage)
-
+  
     try {
       const res = await axios.post(`${import.meta.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/users/register`, formData)
       console.log('Registered:', res.data)
